@@ -18,8 +18,14 @@ var Login = React.createClass({
           <Text>
             Login
           </Text>
-          <TextInput style={{width:320, height: 40, borderColor: 'gray', borderWidth: 1}} />
-          <TextInput style={{width:320, height: 40, borderColor: 'gray', borderWidth: 1}} />
+          <TextInput
+            style={{width:320, height: 40, borderColor: 'gray', borderWidth: 1}}
+            placeholder={'email'}
+          />
+          <TextInput
+            style={{width:320, height: 40, borderColor: 'gray', borderWidth: 1}}
+            placeholder={'password'}
+          />
         </View>
       </View>
     );
