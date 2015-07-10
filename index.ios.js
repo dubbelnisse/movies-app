@@ -1,8 +1,9 @@
 'use strict';
 
-var React = require('react-native');
-var Login = require('./components/login');
-var Styles = require('./styles/styles.json');
+var React       = require('react-native');
+var Login       = require('./components/login');
+var Styles      = require('./styles/styles.json');
+var LatestMovies = require('./components/latestmovies');
 
 var {
   AppRegistry,
@@ -16,6 +17,7 @@ var Movies = React.createClass({
     return (
       <View style={styles.container}>
         <Login />
+        <LatestMovies />
       </View>
     );
   }
