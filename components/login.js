@@ -3,6 +3,7 @@
 var React = require('react-native');
 var Styles = require('../styles/styles.json');
 var Input = require('./input');
+var Api = require('../helpers/Api');
 
 var {
   AppRegistry,
@@ -22,22 +23,14 @@ var Login = React.createClass({
   },
 
   _login: function () {
-    console.log(this.state.email, this.state.password);
     var requestURL = 'http://rethinkdb.believer.svc.tutum.io/login?email='+this.state.email+'&password='+this.state.password;
-    fetch
-      (requestURL, {
-        method: 'POST'
-      })
-      .then( (response) => response.json() )
+    Api.post(requestURL)
       .then( (data) => {
         console.log(data);
-      })
-      .catch( (error) => console.log(error) )
-      .done();
+      });
   },
 
   updateValue:function(change){
-    console.log(change);
     if (change.for === 'email') {
       this.setState({
         email: change.text
