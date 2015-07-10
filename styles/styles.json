@@ -1,8 +1,16 @@
 {
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    alignItems: "center",
+    backgroundColor: "#F5FCFF",
+    marginTop: 50
+  },
+  input: {
+    borderColor: "gray",
+    width:320,
+    height: 50,
+    borderWidth: 1,
+    padding: 10,
+    marginTop: 20
   }
 }
